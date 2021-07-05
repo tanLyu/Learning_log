@@ -135,6 +135,7 @@ BOOTSTRAP3 = {
 
 if os.getcwd() == '/app':
     import dj_database_url
+    DISABLE_COLLECTSTATIC = 1
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
     }
