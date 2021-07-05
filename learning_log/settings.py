@@ -140,7 +140,7 @@ if os.getcwd() == '/app':
     }
     DEBUG = False
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARD_PROTO', 'https')
-    ALLOWED_HOSTS = ['whispering-bayou-75258.herokuapp.com/']
+    ALLOWED_HOSTS = ['whispering-bayou-75258.herokuapp.com']
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
