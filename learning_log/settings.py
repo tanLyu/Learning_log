@@ -138,6 +138,7 @@ if os.getcwd() == '/app':
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
     }
+    DEBUG = False
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARD_PROTO', 'https')
     ALLOWED_HOSTS = ['whispering-bayou-75258.herokuapp.com/']
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
