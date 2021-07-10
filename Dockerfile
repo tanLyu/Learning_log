@@ -10,5 +10,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "-b", "0.0.0.0:8000","-k","gevent", "-t", "300", "--access-logfile", "-", "app.wsgi:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000","-k","gevent", "-t", "300", "--access-logfile", "-", "learning_log.wsgi:application"]
 
