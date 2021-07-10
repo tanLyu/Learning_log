@@ -4,7 +4,7 @@ FROM daocloud.io/atsctoo/python3.8.2-ubuntu18.04:latest
 
 WORKDIR /usr/tanly/app/
 
-COPY requirements.ext requirements.txt
+COPY requirements.txt requirements.txt
 
 RUN pip3 install -r requirements.txt
 

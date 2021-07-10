@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'learning_log',
+    'USER': 'root',
+    'PASSWORD': 'zgh19950605',
+    'HOST': '118.89.90.113',
+    'PORT': '3306',
     }
 }
 
@@ -133,10 +137,16 @@ BOOTSTRAP3 = {
     'include_jquery' : True
 }
 
-if os.getcwd() == '/app':
-    import dj_database_url
+if os.getcwd() == '/usr/tanly/app':
     DATABASES = {
-        'default': dj_database_url.config(default='postgres://localhost')
+        'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'learning_log',
+        'USER': 'root',
+        'PASSWORD': 'zgh19950605',
+        'HOST': '118.89.90.113',
+        'PORT': '3306',
+        }
     }
     DEBUG = False
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARD_PROTO', 'https')
